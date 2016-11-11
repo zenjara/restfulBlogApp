@@ -1,0 +1,21 @@
+body {
+    background-color: #DCDCDC;
+}
+#forma {
+   width: 40%; 
+   margin: 25px auto;
+}
+img{
+    max-width: 100%;
+    max-height:30%;
+    margin:auto;
+}
+.well {
+    margin: 1% auto 4%;
+    width: 40%;
+    word-break: break-all;
+    word-wrap: break-word;
+}
+#delete{
+    display: inline;
+}

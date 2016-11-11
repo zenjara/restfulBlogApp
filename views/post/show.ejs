@@ -1,0 +1,20 @@
+<%include ../partials/header%>
+    
+    <div class="container">
+            <div class="well">
+                <h4><%=post.title%></h4>
+                <img class="thumbnail" src="<%=post.image%>">
+                <h5>Created at: <%=post.created%></h5>
+                <h5>Author: <%=post.author.username%></h5>
+                <p><%=post.content%></p>
+                <% if ( currentUser && post.author.id.equals(currentUser._id)){ %>
+                    <a class="btn btn-warning" href="/posts/<%=post._id%>/edit">Edit</a>
+                    <form id="delete" method="POST" action="/posts/<%=post._id%>?_method=DELETE">
+                        <button  class="btn btn-danger">Delete</button>
+                    </form>
+                <% } %>
+            </div>
+    </div>
+    
+
+<%include ../partials/footer%>

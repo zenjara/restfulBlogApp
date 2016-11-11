@@ -1,0 +1,20 @@
+<%include ../partials/header%>
+    
+    <div class="container">
+        <%posts.forEach(function(post){ %>
+            <h4 class="text-center"><%=post.title%></h4>
+            <div class="well">
+                <img  src="<%=post.image%>">
+                <h5>Author: <%=post.author.username%></h5>
+                <br>
+                <br>
+                <h5>Created at: <%=post.created%></h5>
+                
+                <p><%=post.content.substring(0,40)+"..."%></p>
+                <a href="/posts/<%=post._id%>">Read more</a>
+            </div>
+        <% });%>
+    </div>
+    
+
+<%include ../partials/footer%>
